@@ -34,6 +34,7 @@ h1{font-size:30px;margin:22px 0 8px;line-height:1.25}
 .note{font-size:13px;opacity:.7;margin-top:10px}
 section{padding:40px 0}
 section.alt{background:var(--teal2)}
+.hero{padding-bottom:56px}
 h2{font-size:22px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
 h2::before{content:"";width:6px;height:22px;border-radius:3px;background:var(--coral)}
 p.lead{opacity:.85;margin-bottom:18px}
@@ -48,61 +49,31 @@ p.lead{opacity:.85;margin-bottom:18px}
 .steps li{counter-increment:s;position:relative;padding:4px 0 12px 44px}
 .steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:30px;height:30px;border-radius:50%;background:var(--coral);color:#fff;font-weight:700;display:grid;place-items:center}
 .contact{display:grid;gap:12px}
-.contact a,.contact button{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;font:inherit;color:inherit;cursor:pointer;background:rgba(255,244,220,.1);border-radius:16px;padding:16px 18px;text-decoration:none;font-size:17px}
-.contact a::after{content:"›";font-size:24px;opacity:.7}
-.contact small{opacity:.7;font-size:13px}
+.contact a{display:grid;grid-template-columns:48px 1fr 20px;align-items:center;gap:14px;background:rgba(255,244,220,.1);border-radius:18px;padding:14px 16px;text-decoration:none;color:inherit}
+.contact a:active{background:rgba(255,244,220,.18)}
+.contact svg.logo{width:48px;height:48px;border-radius:12px;display:block}
+.contact .txt b{display:block;font-size:17px;line-height:1.3}
+.contact .txt span{display:block;font-size:14px;opacity:.75;line-height:1.4}
+.contact .go{font-size:22px;opacity:.6;text-align:right}
 footer{text-align:center;font-size:12px;opacity:.6;padding:28px 20px 40px}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>勇敢宁宁</b><a class="cta" href="#download">下载</a></div></nav>
+<nav><div class="wrap"><b>勇敢宁宁</b><a class="cta" href="#contact">联系我</a></div></nav>
 
 <header class="hero"><div class="wrap">
   <img src="img/hero.jpg" alt="勇敢宁宁">
   <h1>勇敢宁宁的剧本世界</h1>
   <p class="sub">翻开一页剧本，走进一个世界。<br>横屏单人射击，闯关、收集、解锁角色。</p>
-  <div class="tags"><span>横屏射击</span><span>剧本战役</span><span>多角色</span><span>单人游玩</span></div>
-  <a id="dl-main" class="btn primary" href="#download">下载安卓版</a>
-  <p class="note">iOS 版即将开放</p>
-</div></header>
-
-<section><div class="wrap">
-  <h2>游戏特色</h2>
-  <p class="lead">每个剧本都是一整卷新的冒险。</p>
-  <div class="feat">
-    <div><b>左手移动，右手瞄准</b>双摇杆操作，单手握持横屏也顺手，还有闪避保命。</div>
-    <div><b>随机地图与武器</b>每次出发房间都不同，几十种武器与上百种奖励、诅咒搭配出不同打法。</div>
-    <div><b>剧本战役与 Boss</b>从《说英雄谁是英雄》一路闯到更多剧本，击败 Boss 解锁新角色。</div>
-  </div>
-</div></section>
-
-<section class="alt"><div class="wrap">
-  <h2>可选角色</h2>
-  <p class="lead">打败对应剧本的 Boss，就能解锁新的伙伴。</p>
-  <div class="chars">
-    <div class="char"><i style="background-image:url(img/ningyuanzhou.jpg)"></i><span>宁远舟</span></div>
-    <div class="char"><i style="background-image:url(img/weishao.jpg)"></i><span>魏劭</span></div>
-    <div class="char"><i style="background-image:url(img/baichoufei.jpg)"></i><span>白愁飞</span></div>
-    <div class="char"><i style="background-image:url(img/yanzijing.jpg)"></i><span>燕子京</span></div>
-  </div>
-</div></section>
-
-<section id="download"><div class="wrap">
-  <h2>下载安装</h2>
-  <p class="lead">当前提供安卓安装包。</p>
-  <a id="dl-apk" class="btn primary" href="#">下载安卓安装包</a>
+  <a id="dl-main" class="btn primary" href="#">下载安卓安装包</a>
   <p class="note" id="dl-meta"></p>
-  <ol class="steps" style="margin-top:22px">
-    <li>点击上方按钮下载 APK 文件。</li>
-    <li>打开下载好的文件，如提示「未知来源」，按提示允许浏览器安装应用。</li>
-    <li>安装完成后打开「勇敢宁宁的剧本世界」，横屏开始游戏。</li>
-  </ol>
-  <p class="note">iOS 版需通过 TestFlight 分发，开放后会在此更新。</p>
-</div></section>
+  <a id="dl-ios" class="btn off" role="button" aria-disabled="true">苹果 iOS 版即将上线</a>
+  <p class="note">安卓安装时如提示「未知来源」，按提示允许浏览器安装即可。</p>
+</div></header>
 
 <section class="alt" id="contact"><div class="wrap">
   <h2>联系我</h2>
-  <p class="lead">反馈、合作、想看更新，来小红书或抖音找我，用户名都是「白菜抽子」。</p>
+  <p class="lead">反馈、合作、想看更新，来小红书或抖音找我。</p>
   <div class="contact" id="contact-list"></div>
 </div></section>
 
@@ -115,37 +86,31 @@ const SITE = {
   apkVersion: "",      // 例如 "0.8"
   apkSize: "",         // 例如 "120 MB"
   contacts: [
-    // url 留空时显示用户名，点击复制；填了主页链接则直接跳转
-    {name: "小红书", user: "白菜抽子", url: "https://xhslink.cn/m/1rXIa0j6C0q"},
-    {name: "抖音",   user: "白菜抽子", url: "https://v.douyin.com/00NS2U5dRb4/"}
+    {name: "小红书", user: "白菜抽子", icon: "xhs",    url: "https://xhslink.cn/m/1rXIa0j6C0q"},
+    {name: "抖音",   user: "白菜抽子", icon: "douyin", url: "https://v.douyin.com/00NS2U5dRb4/"}
   ]
 };
 
-const apk = document.getElementById("dl-apk"), main = document.getElementById("dl-main"), meta = document.getElementById("dl-meta");
+const main = document.getElementById("dl-main"), meta = document.getElementById("dl-meta");
 if (SITE.apkUrl) {
-  apk.href = SITE.apkUrl; apk.setAttribute("download", "");
-  main.href = SITE.apkUrl;
+  main.href = SITE.apkUrl; main.setAttribute("download", "");
   const m = [SITE.apkVersion && "版本 " + SITE.apkVersion, SITE.apkSize].filter(Boolean).join(" · ");
   meta.textContent = m;
 } else {
-  for (const b of [apk, main]) { b.classList.remove("primary"); b.classList.add("off"); b.textContent = "安卓安装包即将上线"; b.removeAttribute("href"); }
+  main.classList.remove("primary"); main.classList.add("off"); main.textContent = "安卓安装包即将上线"; main.removeAttribute("href");
 }
+const LOGOS = {
+  xhs: '<svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#ff2442"/><text x="24" y="29" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" font-family="PingFang SC,Microsoft YaHei,sans-serif">小红书</text></svg>',
+  douyin: '<svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#000"/><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"><path d="M23 12v19.5a5.5 5.5 0 1 1-5.5-5.5M23 12c.6 5 3.8 8 9 8.5" stroke="#25f4ee" transform="translate(-2 -1.5)"/><path d="M23 12v19.5a5.5 5.5 0 1 1-5.5-5.5M23 12c.6 5 3.8 8 9 8.5" stroke="#fe2c55" transform="translate(2 1.5)"/><path d="M23 12v19.5a5.5 5.5 0 1 1-5.5-5.5M23 12c.6 5 3.8 8 9 8.5" stroke="#fff"/></g></svg>'
+};
 const list = document.getElementById("contact-list");
 for (const c of SITE.contacts) {
-  const el = document.createElement(c.url ? "a" : "button");
-  if (c.url) { el.href = c.url; el.target = "_blank"; el.rel = "noopener"; }
-  el.innerHTML = "<span></span><small></small>";
-  el.children[0].textContent = c.name;
-  const hint = el.children[1];
-  hint.textContent = c.user;
-  if (!c.url) {
-    el.type = "button";
-    el.onclick = () => {
-      (navigator.clipboard ? navigator.clipboard.writeText(c.user) : Promise.reject()).catch(() => {});
-      hint.textContent = "已复制，去" + c.name + "搜索";
-      setTimeout(() => hint.textContent = c.user, 2000);
-    };
-  }
+  const el = document.createElement("a");
+  el.href = c.url; el.target = "_blank"; el.rel = "noopener";
+  el.setAttribute("aria-label", c.name + " " + c.user);
+  el.innerHTML = LOGOS[c.icon] + '<div class="txt"><b></b><span></span></div><div class="go">›</div>';
+  el.querySelector("b").textContent = c.name;
+  el.querySelector("span").textContent = c.user;
   list.appendChild(el);
 }
 </script>
