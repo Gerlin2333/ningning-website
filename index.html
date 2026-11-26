@@ -92,6 +92,8 @@ const SITE = {
 const main = document.getElementById("dl-main"), meta = document.getElementById("dl-meta");
 if (SITE.apkUrl) {
   main.href = SITE.apkUrl; main.setAttribute("download", "");
+  // 点击统计：只发一个信标，失败也不影响下载
+  main.addEventListener("click", () => { try { navigator.sendBeacon("/api/click"); } catch (e) {} });
   const m = [SITE.apkVersion && "版本 " + SITE.apkVersion, SITE.apkSize].filter(Boolean).join(" · ");
   meta.textContent = m;
 } else {
